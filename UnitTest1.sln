@@ -1,31 +1,166 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30002.166
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UnitTest1", "UnitTest1\UnitTest1.vcxproj", "{E35F91EB-0912-4C60-A059-FF08FB5B33D7}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|x64 = Debug|x64
-		Debug|x86 = Debug|x86
-		Release|x64 = Release|x64
-		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E35F91EB-0912-4C60-A059-FF08FB5B33D7}.Debug|x64.ActiveCfg = Debug|x64
-		{E35F91EB-0912-4C60-A059-FF08FB5B33D7}.Debug|x64.Build.0 = Debug|x64
-		{E35F91EB-0912-4C60-A059-FF08FB5B33D7}.Debug|x86.ActiveCfg = Debug|Win32
-		{E35F91EB-0912-4C60-A059-FF08FB5B33D7}.Debug|x86.Build.0 = Debug|Win32
-		{E35F91EB-0912-4C60-A059-FF08FB5B33D7}.Release|x64.ActiveCfg = Release|x64
-		{E35F91EB-0912-4C60-A059-FF08FB5B33D7}.Release|x64.Build.0 = Release|x64
-		{E35F91EB-0912-4C60-A059-FF08FB5B33D7}.Release|x86.ActiveCfg = Release|Win32
-		{E35F91EB-0912-4C60-A059-FF08FB5B33D7}.Release|x86.Build.0 = Release|Win32
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {42246154-4995-48DE-B66A-9B691FC0A6D6}
-	EndGlobalSection
-EndGlobal
+#include<stdio.h>
+int main()
+
+{
+	printf("\n");
+	printf("Hero no.1:");
+	printf("Violet (carry,life:15%,Power attact:90%)\n");
+	printf("Hero,s price:coin =13888\n");
+	printf("Skin,s price:skin1=490\n");
+	printf("***************************************************\n");
+	
+	printf("Hero no.2:");
+	printf("Airi (Fighter/Assassin,life:25%,Power attact:100%)\n");
+	printf("Hero,s price:coin =28888\n");
+	printf("Skin,s price:skin1=510\n");
+	printf("***************************************************\n");
+	
+	printf("Hero no.3:");
+	printf("Airi (carry,life:15%,Power attact:90%)\n");
+	printf("Hero,s price:coin =18888\n");
+	printf("Skin,s price:skin1=450,skin2=510:\n");
+	printf("***************************************************\n\n\n");
+		
+		
+	int c,c1,coupon,co1,H,s,i;
+	char name[20];
+	
+	
+	printf("****Please enter your detail****\n\n");
+	printf("Enter name:");
+	scanf("%s",&name);
+    printf("Enter coin balance:");
+    scanf("%d",&c);
+    printf("Enter coupon balance:");
+    scanf("%d",&coupon);
+    printf("Enter Hero no.1,2,3:");
+    scanf("%d",& H);
+    printf("Enter skin no.1,2,0:");
+    scanf("%d",&s);
+    
+	
+	
+    if(i==1)
+    {
+    	if(c>=13888)
+    	{
+    	if(s==1)
+    	{
+	    printf("Total coin = 13888, coupon = 490\n");
+	    printf("This transaction is completed. You got Violet for fighting. \n");
+	    printf("Thank you %s \n",name);
+		co1 = coupon-490;
+	    }
+
+		else if(s==2)
+		{
+			printf("Total coin = 13888, coupon = 179\n");
+	    	printf("This transaction is completed. You got Violet for fighting. \n");
+	   		printf("Thank you %s \n",name);
+			co1 = coupon-179;
+			
+		}
+		else if(s==3)
+		{
+			printf("Total coin = 13888, coupon = 0\n");
+	    	printf("This transaction is completed. You got Violet for fighting. \n");
+	   		printf("Thank you %s \n",name);
+			co1 = coupon-0;
+		}
+		printf("*___________________________________________________________________________*\n");
+    	c1=c-13888;
+        printf("Your balance of coin = %d, coupon = %d",c1,co1);
+    	}
+    	else if(c<=13888)
+    	printf("Not completed because you not have enough coin/coupon.\n");
+    	printf("thank you %s\n",name);
+    	printf("Your balance of coin = %d, coupon = %d\n",c,coupon);
+	}
+	
+	
+    if(i==2)
+    {
+    	if(c>=28888)
+    	{
+    	if(s==1)
+    	{
+	    printf("Total coin = 28888, coupon = 510\n");
+	    printf("This transaction is completed. You got Violet for fighting. \n");
+	    printf("Thank you %s \n",name);
+		co1 = coupon-510;
+	    }
+
+		else if(s==2)
+		{
+			printf("Total coin = 28888, coupon = 375\n");
+	    	printf("This transaction is completed. You got Violet for fighting. \n");
+	   		printf("Thank you %s \n",name);
+			co1 = coupon-375;
+			
+		}
+		else if(s==3)
+		{
+			printf("Total coin = 28888, coupon = 0\n");
+	    	printf("This transaction is completed. You got Violet for fighting. \n");
+	   		printf("Thank you %s \n",name);
+			co1 = coupon-0;
+		}
+		printf("*___________________________________________________________________________*\n");
+    	c1=c-28888;
+        printf("Your balance of coin = %d, coupon = %d",c1,co1);
+    	}
+    	else if(c<=28888)
+    	printf("Not completed because you not have enough coin/coupon.\n");
+    	printf("thank you %s\n",name);
+    	printf("Your balance of coin = %d, coupon = %d\n",c,coupon);
+	}
+	
+	 
+	 if(i==3)
+    {
+    	if(c>=18888)
+    	{
+    	if(s==1)
+    	{
+	    printf("Total coin = 18888, coupon = 450\n");
+	    printf("This transaction is completed. You got Violet for fighting. \n");
+	    printf("Thank you %s \n",name);
+		co1 = coupon-450;
+	    }
+
+		else if(s==2)
+		{
+			printf("Total coin = 18888, coupon = 510\n");
+	    	printf("This transaction is completed. You got Violet for fighting. \n");
+	   		printf("Thank you %s \n",name);
+			co1 = coupon-510;
+			
+		}
+		else if(s==3)
+		{
+			printf("Total coin = 18888, coupon = 0\n");
+	    	printf("This transaction is completed. You got Violet for fighting. \n");
+	   		printf("Thank you %s \n",name);
+			co1 = coupon-0;
+		}
+		printf("*_____________________________________________________________________________*\n");
+    	c1=c-28888;
+        printf("Your balance of coin = %d, coupon = %d",c1,co1);
+    	}
+    	else if(c<=28888)
+    	printf("Not completed because you not have enough coin/coupon.\n");
+    	printf("thank you %s\n",name);
+    	printf("Your balance of coin = %d, coupon = %d\n",c,coupon);
+	}
+	
+
+
+	
+	
+	
+	
+	
+	
+   }
+	
+     
